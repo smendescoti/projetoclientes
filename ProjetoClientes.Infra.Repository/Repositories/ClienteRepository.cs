@@ -22,5 +22,31 @@ namespace ProjetoClientes.Infra.Repository.Repositories
         {
             _context = context;
         }
+
+        public Cliente GetByEmail(string email)
+        {
+            return _context.Cliente
+                .FirstOrDefault(c => c.Email.Equals(email));
+        }
+
+        public Cliente GetByCpf(string cpf)
+        {
+            return _context.Cliente
+                .FirstOrDefault(c => c.Cpf.Equals(cpf));
+        }
+
+        public Cliente GetByTelefone(string telefone)
+        {
+            return _context.Cliente
+                .FirstOrDefault(c => c.Telefone.Equals(telefone));
+        }
+
+        public List<Cliente> GetByDataCadastro(DateTime dataMin, DateTime dataMax)
+        {
+            return _context.Cliente
+                .Where(c => c.DataCadastro >= dataMin && c.DataCadastro <= dataMax)
+                .OrderBy(c => c.DataCadastro)
+                .ToList();
+        }
     }
 }

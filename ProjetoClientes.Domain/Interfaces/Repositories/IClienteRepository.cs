@@ -12,6 +12,10 @@ namespace ProjetoClientes.Domain.Interfaces.Repositories
     /// </summary>
     public interface IClienteRepository : IBaseRepository<Cliente>
     {
+        Cliente GetByEmail(string email);
+        Cliente GetByCpf(string cpf);
+        Cliente GetByTelefone(string telefone);
 
+        List<Cliente> GetByDataCadastro(DateTime dataMin, DateTime dataMax);
     }
 }
