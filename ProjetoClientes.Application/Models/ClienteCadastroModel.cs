@@ -12,7 +12,7 @@ namespace ProjetoClientes.Application.Models
     /// </summary>
     public class ClienteCadastroModel
     {
-        [MinLength(10, ErrorMessage = "Por favor, informe no mínimo {1} caracteres.")]
+        [MinLength(6, ErrorMessage = "Por favor, informe no mínimo {1} caracteres.")]
         [MaxLength(150, ErrorMessage = "Por favor, informe no máximo {1} caracteres.")]
         [Required(ErrorMessage = "Por favor, informe o nome do cliente.")]
         public string Nome { get; set; }
@@ -26,7 +26,7 @@ namespace ProjetoClientes.Application.Models
         [Required(ErrorMessage = "Por favor, informe o cpf do cliente.")]
         public string Cpf { get; set; }
 
-        [MinLength(9, ErrorMessage = "Por favor, informe no mínimo {1} caracteres.")]
+        [MinLength(8, ErrorMessage = "Por favor, informe no mínimo {1} caracteres.")]
         [MaxLength(15, ErrorMessage = "Por favor, informe no máximo {1} caracteres.")]
         [Required(ErrorMessage = "Por favor, informe o telefone do cliente.")]
         public string Telefone { get; set; }

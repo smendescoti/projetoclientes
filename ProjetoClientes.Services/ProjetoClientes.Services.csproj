@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProjetoClientes.Application\ProjetoClientes.Application.csproj" />
+    <ProjectReference Include="..\ProjetoClientes.Infra.Repository\ProjetoClientes.Infra.Repository.csproj" />
   </ItemGroup>
 
 </Project>

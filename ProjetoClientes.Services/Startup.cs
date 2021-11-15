@@ -29,6 +29,7 @@ namespace ProjetoClientes.Services
 
             SwaggerConfiguration.ConfigureServices(services); //SWAGGER
             CorsConfiguration.ConfigureServices(services); //CORS
+            DependencyInjectionConfiguration.ConfigureServices(services, Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
